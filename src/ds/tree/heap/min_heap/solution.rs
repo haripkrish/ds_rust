@@ -77,6 +77,7 @@ impl MinHeap {
         }
 
     }
+
     pub fn print(&self) {
         info!("Min Heap: {:?}", self);
     }
