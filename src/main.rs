@@ -1,16 +1,12 @@
-use env_logger;
-use log::{debug, error, info, warn};
+use log::{info};
 
 mod ds;
-use ds::tree::heap::{min_heap};
-use min_heap::solution as min_heap_solution;
+use ds::cmd_handler;
+mod config;
 
-fn setup_logger() {
-    env_logger::init();
-}
 
 fn main() {
-    setup_logger();
+    config::setup_logger();
     info!("DS & Algo - Rust");
-    min_heap_solution::min_heap();
+    cmd_handler::run();
 }
